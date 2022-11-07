@@ -1,8 +1,25 @@
 import React from "react";
 import { useSignMessage } from "wagmi";
 import { verifyMessage } from "ethers/lib/utils";
+import { ethers } from "ethers";
+import abi from "../../abi.json"
 
-const SignMessage = () => {
+
+
+//sign message
+const SignMessage = ({address}) => {
+
+  const contractAddress = "0x83b7D4ADc0dF14904F1a68DAE210489BE4ff19B4";
+
+  // A Web3Provider wraps a standard Web3 provider, which is
+  // what MetaMask injects as window.ethereum into each page
+  const provider = new ethers.providers.Web3Provider(window.ethereum);
+  const signer = provider.getSigner();
+
+  const contractAbi = abi;
+  // The Contract object
+  const medContract = new ethers.Contract(contractAddress, contractAbi, signer);
+
   const recoveredAddress = React.useRef(null);
   const { data, error, isLoading, signMessage } = useSignMessage({
     onSuccess(data, variables) {
@@ -12,12 +29,12 @@ const SignMessage = () => {
     },
   });
 
-  const handleSignIn = () => {
-    signMessage({ message: "We are verifying your credentials." });
+  const handleSignIn = async () => {
+    //signMessage({ message: "We are verifying your credentials." });
+    await medContract.signIn(address);
   };
-
-  const handleSignUp = ({ name, information }) => {
-    console.log("👉 | handleSignUp", name, information);
+  const handleSignUp = async ({ name, information }) => {
+    await medContract.signUp(address, name, information);
   };
 
   return (

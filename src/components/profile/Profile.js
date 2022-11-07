@@ -29,7 +29,7 @@ const Profile = () => {
             Disconnect
           </button>
         </div>
-        <SignMessage />
+        <SignMessage address={address} />
       </div>
     );
   }
