@@ -43,7 +43,7 @@ Covers the bulk of KYC instances towards retail customers:
 
 ## Future Perspective:  
 Apply ZK so that an entity can be proven without revealing which entity the proof refers to using Merkle Proof.  
-Making it ZK KYC Authentication.
+Making it ZK KYC Authentication using [Zero-Knowledge KYC Certificates](https://github.com/ethereum/EIPs/pull/5851/files)
 
 # Open for discussion.
 
