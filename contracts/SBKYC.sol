@@ -10,7 +10,7 @@ License Version CBE-CC0 https://7q7win2vvm2wnqvltzauqamrnuyhq3jn57yqad2nrgau4fe3
 */
 import {LicenseVersion, CantBeEvil} from "@a16z/contracts/licenses/CantBeEvil.sol";
 
-contract SBKYC is ERC721Enumerable, Ownable, CantBeEvil(LicenseVersion.CBE_CC0) {
+contract SBKYC is ERC721Enumerable, Ownable, CantBeEvil(LicenseVersion.PUBLIC) {
 
     using Counters for Counters.Counter;
     Counters.Counter public _tokenIdCounter;
