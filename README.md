@@ -41,6 +41,14 @@ Covers the bulk of KYC instances towards retail customers:
 • Telecom: acquire a mobile plan (pre-paid or post-paid)  
 • Real Estate: enter into rental agreement.  
 
+## Buildbear:  
+I’ve deployed this smart contract on [BuildBear](https://buildbear.io/),  
+it creates a testnet for you, you can also create a customised node, which is amazing.  
+Here’s a [guide](https://medium.com/buildbear/learn-code-and-deploy-your-own-multisig-wallet-and-test-it-with-your-friends-now-cb86cdcb8c8) for the process.
+
+You can see my deployed contract on BuildBear [here](https://explorer.buildbear.io/node/great-goldwasser-d01031/address/0xc2d406F6ea337505A340C7C8E0E3b8422983B8ee) and interact with it in the write contract option  
+And when you have a transaction, go to the transaction detail and over there you’ll find a section called ‘ADVANCE’ where you’ll find the values that you passed in the transaction.
+
 ## Future Perspective:  
 Apply ZK so that an entity can be proven without revealing which entity the proof refers to using Merkle Proof.  
 Making it ZK KYC Authentication using [Zero-Knowledge KYC Certificates](https://github.com/ethereum/EIPs/pull/5851/files)
